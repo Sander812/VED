@@ -18,7 +18,7 @@ def get_current_location():
         return 0, 0
 
 # Last inn Excel-arket
-df = pd.read_excel(r"C:\VED\ProduktLagerSalg.xlsm", sheet_name='Map')
+df = pd.read_excel("ProduktLagerSalg.xlsm", sheet_name='Map')
 
 # Splitt 'LatLong'-kolonnen til to nye kolonner 'latitude' og 'longitude'
 df[['latitude', 'longitude']] = df['LatLong'].str.split(',', expand=True)
